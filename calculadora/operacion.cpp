@@ -7,6 +7,7 @@
 
 #include "operacion.h"
 #include <iostream>
+#include <cmath>
 
 //Metodos Constructores
 Operacion::Operacion() {
@@ -56,6 +57,16 @@ float Operacion::div() {
     
     float resDiv = num1/num2;
     return resDiv;
+}
+
+float Operacion::raiz() {
+    float resRaiz = std::pow(num1, (1/num2));
+    return resRaiz;
+}
+
+float  Operacion::power() {
+    float resPower = std::pow(num1, num2);
+    return resPower;
 }
 
 

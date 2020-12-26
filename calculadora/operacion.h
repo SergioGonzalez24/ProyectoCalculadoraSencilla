@@ -36,6 +36,8 @@ public:
     float resta();
     float mult();
     float div();
+    float raiz();
+    float power();
     
     
     

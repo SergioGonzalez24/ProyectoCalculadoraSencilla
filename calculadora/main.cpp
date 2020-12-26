@@ -27,7 +27,7 @@ int main() {
         
         cout << "Programa que le ayudara a hacer operaciones basicas" << endl;
         cout << "Elija la operacion que desea realizar: " << endl;
-        cout << "1-.Suma \n" << "2-.Resta \n" << "3-.Multiplicacion \n" << "4-.Division \n" << "5-.Salir del programa \n"<< endl;
+        cout << "1-.Suma \n" << "2-.Resta \n" << "3-.Multiplicacion \n" << "4-.Division \n" << "5-.Raices \n" << "6-.Potencias \n" << "7-.Salir del programa \n"<< endl;
         
         int choose;
         cin >> choose;
@@ -294,7 +294,133 @@ int main() {
             } while (preg==true);
         } //Fin Division
         
-        if (choose==5) {
+        if (choose == 5) {
+
+            bool ciclo=true;
+            
+            while (ciclo==true) {
+                
+                cout << "Elijio la operacion raices \n" << endl;
+                
+                cout << "Elija su primer numero: ";
+                cin >> n1;
+                cout << endl;
+                numeros.setNum1(n1);
+                
+                cout << "Elija su segundo numero: ";
+                cin >> n2;
+                cout << endl;
+                numeros.setNum2(n2);
+                
+                
+                cout << "La operacion realizada es: " << numeros.getNum1() << " raiz " << numeros.getNum2() << " obteniendo como resultado = " << numeros.raiz()<<"\n" << endl;
+
+                do {
+                    
+                    cout << "¿Desea realizar otra raiz? y/n ";
+                    string pregunta;
+                    cin >> pregunta;
+                    
+                    if (pregunta=="y") {
+                        system("clear");
+                        preg=false;
+                    }
+                    
+                    else if (pregunta=="n") {
+                        system("clear");
+                        ciclo=false;
+                        preg=false;
+                    }
+                    
+                    else {
+                        cout << "respuesta no valida try again" << endl;
+                        system("clear");
+                    }
+                    
+                } while (preg==true);
+            }
+
+            do {
+                
+                cout << "¿desea regresar a menu? y/n ";
+                string resMenu;
+                cin >> resMenu;
+                
+                if (resMenu=="y") { preg=false; }
+                else if (resMenu=="n") {
+                    preg=false;
+                    menu=false;
+                }
+                
+                else{cout << "Valor no valido try again" << endl; preg=true;}
+                
+            } while (preg==true);
+        }//Fin Raiz
+        
+        if (choose == 6) {
+            bool ciclo=true;
+            
+            while (ciclo==true) {
+                
+                cout << "Elijio la operacion potencia \n" << endl;
+                
+                cout << "Elija su primer numero: ";
+                cin >> n1;
+                cout << endl;
+                numeros.setNum1(n1);
+                
+                cout << "Elija su segundo numero: ";
+                cin >> n2;
+                cout << endl;
+                numeros.setNum2(n2);
+                
+                
+                cout << "La operacion realizada es: " << numeros.getNum1() << " ^ " << numeros.getNum2() << " obteniendo como resultado = " << numeros.power() <<"\n" << endl;
+
+                do {
+                    
+                    cout << "¿Desea realizar otra potencia? y/n ";
+                    string pregunta;
+                    cin >> pregunta;
+                    
+                    if (pregunta=="y") {
+                        system("clear");
+                        preg=false;
+                    }
+                    
+                    else if (pregunta=="n") {
+                        system("clear");
+                        ciclo=false;
+                        preg=false;
+                    }
+                    
+                    else {
+                        cout << "respuesta no valida try again" << endl;
+                        system("clear");
+                    }
+                    
+                } while (preg==true);
+            }
+
+            do {
+                
+                cout << "¿desea regresar a menu? y/n ";
+                string resMenu;
+                cin >> resMenu;
+                
+                if (resMenu=="y") { preg=false; }
+                else if (resMenu=="n") {
+                    preg=false;
+                    menu=false;
+                }
+                
+                else{cout << "Valor no valido try again" << endl; preg=true;}
+                
+            } while (preg==true);
+        }//Fin potencias
+            
+        
+        if (choose==7) {
 
             do {
                 
